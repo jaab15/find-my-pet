@@ -1,0 +1,96 @@
+@import "variables";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.panel-info {
+  .panel-heading {
+    background: white;
+    border: none;
+    color: $brand-info;
+
+    .social{
+      font-size: 20px;
+      a{
+        color: $brand-info;
+        margin: 0 10px;
+      }
+
+    }
+  }
+}
+
+body{
+  background: #aeb4bd;
+}
+
+.btn-primary{
+  color: white;
+}
+
+.pink{
+  color: $brand-danger;
+}
+.main-painel{
+  background: #e4e4e4;
+  color: #959595;
+  font-size: 11px;
+  height: 400px;
+    overflow: scroll;
+
+  .btn-default{
+    background: none;
+  }
+
+  .btn-primary{
+    background: #888686;
+    border-color: #53662b;
+    &:hover{
+      color: white;
+    }
+  }
+
+  strong{
+    color: black;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  h3{
+    color: #1b81e9;
+    margin-bottom: 20px;
+  }
+
+}
+
+.modal-content{
+  background: #e5ebe6;
+
+}
+
+
+.fb, .tw{
+  color: white;
+  i{
+    margin-right: 10px;
+  }
+}
+
+.fb{
+  background: #3B5998;
+  &:hover{
+    background: darken(#3B5998, 10%);
+    color: white;
+  }
+}
+
+.tw{
+  background: #00ACED;
+  &:hover{
+    background: darken(#00ACED, 10%);
+    color: white;
+  }
+}

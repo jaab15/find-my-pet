@@ -1,0 +1,11 @@
+
+<div class="container">
+      <%= @sighting.errors.full_messages.join(', ') %>
+      <%= render 'form', {btn_label: 'Submit'} %>
+      <% if @sighting.pet_id.present? %>
+        <h2><%= @sighting.pet.name %></h2>
+        <% if @sighting.pet.image.present? %>
+          <%= image_tag @sighting.pet.image.first.url, class: 'question-thumbnail' %>
+        <% end %>
+      <% end %>
+</div>

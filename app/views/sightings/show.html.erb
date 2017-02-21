@@ -1,0 +1,33 @@
+<h1>Sighting</h1>
+
+<section class="col-md-6">
+<% if @sighting.image.present? %>
+      <%= image_tag @sighting.image.url, class: 'question-thumbnail' %>
+<% end %>
+</section>
+
+<div class="col-md-6">
+<%= @sighting.pet_type %>
+<div>
+<%= @sighting.note %>
+</div>
+<div>
+Last Seen on: <%= @sighting.last_seen_date %> at <% @sighting.last_seen_time %>.
+</div>
+<h2>Contact Info</h2>
+<div>
+<%= @sighting.name %>
+</div>
+<div>
+<%= @sighting.contact %>
+</div>
+<%# if can? :manage, @sighting %>
+<%= link_to edit_sighting_path(@sighting) do %>
+<span class="glyphicon glyphicon-pencil"></span>
+<% end %>
+<%= link_to sighting_path(@sighting), method: :delete do %>
+<span class="glyphicon glyphicon-trash"></span>
+<% end %>
+<%#end%>
+
+</div>
